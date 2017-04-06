@@ -13,10 +13,12 @@ confinement: strict
 
 apps:
   paraview:
+    # command: desktop-launch bin/paraview
     command: bin/paraview
     plugs:
       - x11
       - opengl
+      - unity7
       - home
       - network
       - network-bind
@@ -24,6 +26,7 @@ apps:
     command: bin/pvbatch
     plugs:
       - x11
+      - opengl
       - home
       - network
       - network-bind
@@ -62,15 +65,13 @@ apps:
   mpiexec:
     command: bin/mpiexec
     plugs:
-      - x11
-      - opengl
       - home
       - network
       - network-bind
 
 parts:
   paraview:
-    source: paraview
+    source: http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.3&type=binary&os=linux64&downloadFile=ParaView-5.3.0-Qt5-OpenGL2-MPI-Linux-64bit.tar.gz
     plugin: dump
-    build-packages:
-      - ttf-ubuntu-font-family
+    after:
+      - desktop-ubuntu-app-platform

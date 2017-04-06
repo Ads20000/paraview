@@ -3,8 +3,6 @@ ParaView Snap Package
 
 Building
 --------
-This assumes you have a ParaView superbuild under the `paraview/` directory.
-
 Then, simply run `snapcraft`.  If not installed (on Ubuntu) `sudo apt install
 snapcraft`.
 
