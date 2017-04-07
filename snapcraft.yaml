@@ -13,8 +13,7 @@ confinement: strict
 
 apps:
   paraview:
-    # command: desktop-launch bin/paraview
-    command: bin/paraview
+    command: desktop-launch $SNAP/bin/paraview
     plugs:
       - x11
       - opengl
@@ -73,5 +72,8 @@ parts:
   paraview:
     source: http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.3&type=binary&os=linux64&downloadFile=ParaView-5.3.0-Qt5-OpenGL2-MPI-Linux-64bit.tar.gz
     plugin: dump
+    stage-packages:
+      - libsm6
+      - libxt6
     after:
-      - desktop-ubuntu-app-platform
+      - desktop-qt5
