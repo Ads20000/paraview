@@ -3,7 +3,7 @@ ParaView Snap Package
 
 Building
 --------
-Then, simply run `snapcraft`.  If not installed (on Ubuntu) `sudo apt install
+Simply run `snapcraft`.  If not installed (on Ubuntu) `sudo apt install
 snapcraft`.
 
 Installing
