@@ -1,6 +1,6 @@
 name: paraview
-version: '5.3.0'
-summary: ParaView 5.3.1 Qt5 OpenGL2
+version: '5.4.1'
+summary: ParaView 5.4.1 Qt5 OpenGL2
 description: |
   ParaView is an open-source, multi-platform data analysis
   and visualization application. ParaView users can quickly
@@ -70,7 +70,7 @@ apps:
 
 parts:
   paraview:
-    source: http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.3&type=binary&os=linux64&downloadFile=ParaView-5.3.0-Qt5-OpenGL2-MPI-Linux-64bit.tar.gz
+    source: https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.4&type=binary&os=Linux&downloadFile=ParaView-5.4.1-Qt5-OpenGL2-MPI-Linux-64bit.tar.gz
     plugin: dump
     stage-packages:
       - libsm6
